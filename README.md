@@ -10,7 +10,15 @@ https://discord.gg/8rZdMd2RwB
 ## Use Example
 ```
 exports['h-notif']:send('fas fa-university', 'success', 'Bank Opened', 'top-center', 6000)
+exports['h-notif']:send('fontawesome icon name', 'type', 'text', 'position', duration is ms)
+
+The UI has multiple types like
+info
+error
+success
+
 the UI has multiple positions like
+
 top-center, top-left, top-right
 mid-left, mid-right,
 bot-center

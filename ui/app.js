@@ -14,7 +14,6 @@ function main(){
         listen(){
             window.addEventListener('message', (event) =>{
                 const item = event.data
-                console.log(item.icon)
                 if(item.type == 'success'){
                     if(item.pos == 'top-center'){
                         this.pos1 = 'justify-center'
@@ -40,7 +39,6 @@ function main(){
                         this.pos1 = 'justify-center'
                         this.pos2 = 'items-end'
                     }
-                    console.log(JSON.stringify(item))
                     this.succ = true
                     this.icon = item.icon
                     this.stext = item.text

@@ -43,7 +43,6 @@ function main(){
                     this.icon = item.icon
                     this.stext = item.text
                     this.d = item.duration
-                    console.log(this.d)
                     not.play()
                     setTimeout(() =>{
                         this.succ = false

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H-NOTIF</title>
+    <link rel="stylesheet" href="css/tailwind.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+</head>
+<body x-data="main()" class="flex-1 h-screen w-full" x-init="listen()">
+    <div class="main flex relative h-screen flex-1" :class="pos1">
+        <div x-show="succ == true" :class="pos2" class="success flex flex-row mt-3 ml-3 mr-3 mb-3 space-x-2 text-white"
+        x-transition:enter="transition ease-out duration-1000" x-transition:enter-start="opacity-0 transform scale-90" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-1000" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-90">
+            <div class="icon h-8 w-8 flex justify-center items-center bg-main-bg rounded-full">
+                <span class="text-green-500"><i :class="icon"></i></span>
+            </div>
+            <div class="text h-8 flex items-center px-4 bg-main-bg rounded-full justify-center">
+                <span x-text="stext"></span>
+            </div>
+        </div>
+        <div x-show="err == true" :class="pos2" class="success flex flex-row mt-3 ml-3 mr-3 mb-3 space-x-2 text-white"
+        x-transition:enter="transition ease-out duration-1000" x-transition:enter-start="opacity-0 transform scale-90" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-1000" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-90">
+            <div class="icon h-8 w-8 flex justify-center items-center bg-main-bg rounded-full">
+                <span class="text-red-500"><i :class="icon"></i></span>
+            </div>
+            <div class="text h-8 flex items-center px-4 justify-center bg-main-bg rounded-full">
+                <span x-text="etext"></span>
+            </div>
+        </div>
+        <div x-show="inf == true" :class="pos2" class="success flex flex-row mt-3 ml-3 mr-3 mb-3 space-x-2 text-white"
+        x-transition:enter="transition ease-out duration-1000" x-transition:enter-start="opacity-0 transform scale-90" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-1000" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-90">
+            <div class="icon h-8 w-8 flex justify-center items-center bg-main-bg rounded-full">
+                <span class="text-indigo-500"><i :class="icon"></i></span>
+            </div>
+            <div class="text h-8 flex items-center justify-center px-4 bg-main-bg rounded-full">
+                <span x-text="itext"></span>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="app.js"></script>
+</html>

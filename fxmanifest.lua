@@ -14,6 +14,6 @@ export 'send'
 files {
     'ui/index.html',
     'ui/app.js',
-    'ui/not.mp4',
+    'ui/not.mp3',
     'ui/css/tailwind.css'
 }

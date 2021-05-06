@@ -1,5 +1,5 @@
 function main(){
-    var not = new Audio('not.mp4')
+    var not = new Audio('not.mp3')
     return{
         succ: false,
         stext: 'empty',

@@ -76,10 +76,11 @@ function main(){
                     this.err = true
                     this.icon = item.icon
                     this.etext = item.text
+                    this.d = item.duration
                     not.play()
                     setTimeout(() =>{
                         this.err = false
-                    }, item.duration)
+                    }, this.d)
                 }
                 if(item.type == 'info'){
                     if(item.pos == 'top-center'){
@@ -109,10 +110,11 @@ function main(){
                     this.inf = true
                     this.icon = item.icon
                     this.itext = item.text
+                    this.d = item.duration
                     not.play()
                     setTimeout(() =>{
                         this.inf = false
-                    }, item.duration)
+                    }, this.d)
                 }
             })
         }

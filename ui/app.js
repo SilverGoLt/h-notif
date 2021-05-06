@@ -51,7 +51,7 @@ function main(){
                 if(item.type == 'error'){
                     if(item.pos == 'top-center'){
                         this.pos1 = 'justify-center'
-                        this.pos2 = 'items-end'
+                        this.pos2 = 'items-start'
                     }
                     if(item.pos == 'top-left'){
                         this.pos1 = 'justify-start'
@@ -76,16 +76,15 @@ function main(){
                     this.err = true
                     this.icon = item.icon
                     this.etext = item.text
-                    this.d = item.duration
                     not.play()
                     setTimeout(() =>{
                         this.err = false
-                    }, this.d)
+                    }, item.duration)
                 }
                 if(item.type == 'info'){
                     if(item.pos == 'top-center'){
                         this.pos1 = 'justify-center'
-                        this.pos2 = 'items-end'
+                        this.pos2 = 'items-start'
                     }
                     if(item.pos == 'top-left'){
                         this.pos1 = 'justify-start'

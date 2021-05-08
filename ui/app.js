@@ -10,6 +10,8 @@ function main(){
         err: false,
         inf: false,
         icon: 'fas fa-check',
+        iicon: 'none',
+        eicon: 'none',
         d: 0,
         listen(){
             window.addEventListener('message', (event) =>{
@@ -46,6 +48,7 @@ function main(){
                     not.play()
                     setTimeout(() =>{
                         this.succ = false
+                        this.icon = 'none'
                     }, this.d)
                 }
                 if(item.type == 'error'){
@@ -74,11 +77,12 @@ function main(){
                         this.pos2 = 'items-end'
                     }
                     this.err = true
-                    this.icon = item.icon
+                    this.eicon = item.icon
                     this.etext = item.text
                     not.play()
                     setTimeout(() =>{
                         this.err = false
+                        this.eicon = 'none'
                     }, item.duration)
                 }
                 if(item.type == 'info'){
@@ -107,12 +111,13 @@ function main(){
                         this.pos2 = 'items-end'
                     }
                     this.inf = true
-                    this.icon = item.icon
+                    this.iicon = item.icon
                     this.itext = item.text
                     this.d = item.duration
                     not.play()
                     setTimeout(() =>{
                         this.inf = false
+                        this.iicon = 'none'
                     }, this.d)
                 }
             })

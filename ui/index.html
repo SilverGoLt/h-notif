@@ -23,7 +23,7 @@
         <div x-show="err == true" :class="pos2" class="success flex flex-row mt-3 ml-3 mr-3 mb-3 space-x-2 text-white"
         x-transition:enter="transition ease-out duration-1000" x-transition:enter-start="opacity-0 transform scale-90" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-1000" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-90">
             <div class="icon h-8 w-8 flex justify-center items-center bg-main-bg rounded-full">
-                <span class="text-red-500"><i :class="icon"></i></span>
+                <span class="text-red-500"><i :class="eicon"></i></span>
             </div>
             <div class="text h-8 flex items-center px-4 justify-center bg-main-bg rounded-full">
                 <span x-text="etext"></span>
@@ -32,7 +32,7 @@
         <div x-show="inf == true" :class="pos2" class="success flex flex-row mt-3 ml-3 mr-3 mb-3 space-x-2 text-white"
         x-transition:enter="transition ease-out duration-1000" x-transition:enter-start="opacity-0 transform scale-90" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-1000" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-90">
             <div class="icon h-8 w-8 flex justify-center items-center bg-main-bg rounded-full">
-                <span class="text-indigo-500"><i :class="icon"></i></span>
+                <span class="text-indigo-500"><i :class="iicon"></i></span>
             </div>
             <div class="text h-8 flex items-center justify-center px-4 bg-main-bg rounded-full">
                 <span x-text="itext"></span>

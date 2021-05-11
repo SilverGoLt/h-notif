@@ -8,4 +8,9 @@ function hnotif(icon, type, text, pos, duration)
 }))
 end
 
+RegisterNetEvent("H-Notif:SendNotification")
+AddEventHandler("H-Notif:SendNotification", function(icon, type, text, pos, duration)
+       hnotif(icon, type, text, pos, duration)
+end)
+
 exports('send', hnotif)
